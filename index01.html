@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="포트폴리오" />
+        <meta name="author" content="임단경" />
+        <title>My portfolio</title>
+        <link href="css/reset.css" rel="stylesheet">
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Kalam&family=Kaushan+Script&display=swap" rel="stylesheet">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <!--custom CSS-->
+        <link href="css/custom.css" rel="stylesheet" />
+
+        <script src="js/jquery-1.7.0.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/jquery.easypiechart.min.js"></script>
+        
+  <script>
+    var TxtRotate = function (el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function () {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+    var that = this;
+    var delta = 300 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+    }
+
+    setTimeout(function () {
+        that.tick();
+    }, delta);
+};
+
+window.onload = function () {
+    var elements = document.getElementsByClassName('txt-rotate');
+    for (var i = 0; i < elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-rotate');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+            new TxtRotate(elements[i], JSON.parse(toRotate), period);
+        }
+    }
+
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".txt-rotate > .wrap { border-right: 0.01em solid #000 }";
+    document.body.appendChild(css);
+};
+$(document).ready(function(){ //시작
+
+
+$("go_top").click(function(){
+    $("html, body").animate({scrollTop: 0})
+  });
+
+  $(window).scroll(function(){
+
+    var scrollPos = $(document).scrollTop();
+    if(scrollPos > 500){
+        $('.chart').easyPieChart({
+         easing: 'easeOutBounce',
+         onStep: function(from, to, percent) {
+            $(this.el).find('.percent').text(Math.round(percent));
+         }
+      });
+        }
+        if(scrollPos > 500 ){
+        $(".tran01").addClass("up")
+      } else {$(".tran01").removeClass("up")}
+      if(scrollPos > 1200 ){
+        $(".tran02").addClass("up")
+      } else {$(".tran02").removeClass("up")}
+      if(scrollPos > 2300 ){
+        $(".tran03").addClass("up")
+      } else {$(".tran03").removeClass("up")}
+      if(scrollPos > 4000 ){
+        $(".tran04").addClass("up")
+      } else {$(".tran04").removeClass("up")}
+
+
+        if(scrollPos > 0){
+        $("#mainNav").addClass("on");
+    } else{$("#mainNav").removeClass("on")};
+
+    if(scrollPos > 0){
+        $(".navbar-nav").addClass("on");
+    } else{$(".navbar-nav").removeClass("on")};
+  })
+});//끝
+  </script>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#Skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#License">License</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <!-- <div class="masthead-subheading">Welcome!</div>
+                <div class="masthead-heading text-uppercase">Designer D Portfolio</div> -->
+                <span class="space">I'm a</span>
+                <h1>
+                    <span class="txt-rotate"
+                          data-period="100"
+                          data-rotate='[ "Designer. ", "Publisher. "]'>
+                    </span>
+                </h1>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#Skills">Get Started</a>
+            </div>
+        </header>
+        <!-- Services-->
+        <section class="page-section" id="Skills">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Skills</h2>
+                    <h3 class="section-subheading text-muted">기술사항</h3>
+                </div>
+                <div class="row text-center tran01">
+                    <div class="col-md-4">
+                        <!-- <img class="skill_pg" src="assets/img/skills01.png" alt="..." /> -->
+                        <span class="chart" data-percent="98">
+                            <span class="percent"></span>
+                        </span>
+                        <h5 class="my-1">Adobe Ai / Ps</h5>
+                        <!-- <p class="text-muted">Lorem ipsum dolor sit amet.</p> -->
+                    </div>
+                    <div class="col-md-4">
+                        <!-- <img class="skill_pg" src="assets/img/skills02.png" alt="..." /> -->
+                        <span class="chart" data-percent="85">
+                            <span class="percent"></span>
+                        </span>
+                        <h5 class="my-1">Adobe InD / Xd</h5>
+                        <!-- <p class="text-muted">Lorem ipsum dolor sit amet.</p> -->
+                    </div>
+                    <div class="col-md-4">
+                        <!-- <img class="skill_pg" src="assets/img/skills03.png" alt="..." /> -->
+                        <span class="chart" data-percent="80">
+                            <span class="percent"></span>
+                        </span>
+                        <h5 class="my-1">HTML / CSS</h5>
+                        <!-- <p class="text-muted">Lorem ipsum dolor sit amet</p> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-custom" id="portfolio">
+            <div class="container ">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Portfolio</h2>
+                    <h3 class="section-subheading text-muted">포트폴리오</h3>
+                </div>
+                <div class="row tran02">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <img class="img-fluid" src="assets/img/portfolio/thum01.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Responsible Web</div>
+                                <div class="portfolio-caption-subheading text-muted">더마 코스메틱 이쪼</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                <img class="img-fluid" src="assets/img/portfolio/thum02.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Branding / Web</div>
+                                <div class="portfolio-caption-subheading text-muted">KD M&C</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <img class="img-fluid" src="assets/img/portfolio/thum03.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">App UI</div>
+                                <div class="portfolio-caption-subheading text-muted">포인튠</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <!-- Portfolio item 4-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                <img class="img-fluid" src="assets/img/portfolio/thum04.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Branding / App UI</div>
+                                <div class="portfolio-caption-subheading text-muted">예스쿨</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <!-- Portfolio item 5-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                                <img class="img-fluid" src="assets/img/portfolio/thum05.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Branding / Editorial</div>
+                                <div class="portfolio-caption-subheading text-muted">창원의 집</div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 6-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                                <img class="img-fluid" src="assets/img/portfolio/thum06.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">-</div>
+                                <div class="portfolio-caption-subheading text-muted">Coming Soon</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">About</h2>
+                    <h3 class="section-subheading text-muted">학력 / 경력사항</h3>
+                </div>
+                <div class="profile clear tran03">
+                    <img src="assets/img/about/profile.jpg">
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <h4>profile</h4>
+                        <p>임단경 Lim dan gyeong<br>
+                            1994.01.02  창원 출생<br>
+                            주소 부산 남구 대연동<br>
+                            INFJ 선의의 옹호자 유형</p>
+                    </li>
+                    <li>
+                        <h4>Experience</h4>
+                        <p>2021 부산IT교육센터 웹디자인&웹퍼블리셔 과정수료<br>
+                            2019 - 2020  아트인 입시미술학원 근무 / 기획팀 사원<br>
+                            2017 - 2018  (주)세영약품 근무 / 관리팀 사원<br>
+                            2012 - 2017  국립창원대학교 산업디자인학과 졸업<br>
+                            2009 - 2012  마산성지여자고등학교 졸업</p>
+                    </li>
+                    <li> 
+                        <h4>Activities</h4>
+                        <p>2016.12  [전시참여]  제 7회 창원신진작가초대전 초청전시<br>
+                            2016.07  [교내활동]  제 26회 산업디자인학과 졸업전시준비위원회<br>
+                            2015.09  [대외활동]  웹매거진 CAMSCON 캠퍼스 패션 포토그래퍼<br>
+                            2015.01  [수상경력]  제 34회 부산산업디자인전람회 특선</p>
+                        </li>
+                    <li>
+                        <h4>License</h4>
+                        <p>2021.12  컴퓨터 그래픽스 운용기능사 (필기합격)<br>
+                            2021.07  GTQ 일러스트 (1급)<br>
+                            2021.06  GTQ 인디자인 (1급)<br>
+                            2021.06  GTQ 포토샵 (1급)<br>
+                            2017.05  자동차운전면허 (2종 보통)</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Team-->
+        <section class="page-section bg-light" id="License">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contact</h2>
+                    <h3 class="section-subheading text-muted">연락처</h3>
+                </div>
+                <div class="row tran04">
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <i class="fas fa-mobile-alt font_size_3rem"></i>
+                            <h4>Mobile</h4>
+                            <p class="text-muted"><a href="#">+82 10-5546-5213</a> </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <i class="far fa-envelope font_size_3rem"></i>
+                            <h4>E-Mail</h4>
+                            <p class="text-muted"><a href="#"> qwer65940102@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <i class="fab fa-instagram font_size_3rem"></i>
+                            <h4>Instargram</h4>
+                            <p class="text-muted"><a class="insta" href="https://www.instagram.com/1.02cm/"> @1.02cm</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted"></p></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer-->
+        <footer class="footer py-4 bg-custom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; 2021 Designer D All rights reserved.</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!"></a>
+                        <a class="link-dark text-decoration-none" href="#!">Have a good day !</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <a href="#" class="go_top">TOP </a>
+        
+        <!-- Portfolio Modals-->
+        <!-- Portfolio item 1 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">이쪼</h2>
+                                    <p class="item-intro text-muted">IZZOr</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/modal01.jpg" alt="..." />
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Category&nbsp;&nbsp;</strong>
+                                            Responsible Web
+                                        </li>
+                                        <li>
+                                            <strong>Date&nbsp;&nbsp;</strong>
+                                            2021 12
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 2 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">KD M&C</h2>
+                                    <p class="item-intro text-muted">KD Machine & Construction</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/modal02.jpg" alt="..." />
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Category&nbsp;&nbsp;</strong>
+                                            Branding / Web Design
+                                        </li>
+                                        <li>
+                                            <strong>Date&nbsp;&nbsp;</strong>
+                                            2021 11
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 3 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">포인튠</h2>
+                                    <p class="item-intro text-muted">Pointune</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/modal03.jpg" alt="..." />
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Category&nbsp;&nbsp;</strong>
+                                            App UI Design
+                                        </li>
+                                        <li>
+                                            <strong>Date&nbsp;&nbsp;</strong>
+                                            2021 11
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 4 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">예스쿨</h2>
+                                    <p class="item-intro text-muted">YESCHOOL</p>
+                            <!----> <div>
+                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/modal04.jpg" alt="..." />
+
+                                    </div>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Category&nbsp;&nbsp;</strong>
+                                            Branding / App UI Design
+                                        </li>
+                                        <li>
+                                            <strong>Date&nbsp;&nbsp;</strong>
+                                            2020 09-10
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 5 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">창원의 집</h2>
+                                    <p class="item-intro text-muted">The house of Changwon</p>
+                            <!----> <div><img class="img-fluid d-block mx-auto" src="assets/img/portfolio/modal05.jpg" alt="..." /></div>
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>Category&nbsp;&nbsp;</strong>
+                                        Branding / Editorial
+                                    </li>
+                                    <li>
+                                        <strong>Date&nbsp;&nbsp;</strong>
+                                        2021 04-05
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 6 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/modal06.jpg" alt="..." />
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Category&nbsp;&nbsp;</strong>
+                                            Branding / App UI Design
+                                        </li>
+                                        <li>
+                                            <strong>Date&nbsp;&nbsp;</strong>
+                                            2021 00-00
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
