@@ -224,7 +224,7 @@ color: transparent; font-size: 0 ;}
 #about .trans03_ri{opacity: 0; transform: translateX(100px); transition: all 0.7s;}/*@@@*/
 #about .trans03_ri.ri{opacity: 1; transform: translateX(0) }
 
-#License{height: 90vh;}
+/* #License{height: 90vh;} */
 #License a{display: block; color:#666; text-decoration:none; margin-top: 20px;} 
 #License a:hover{color: #3de2a3;}
 #License .tran04{
