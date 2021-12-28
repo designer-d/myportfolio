@@ -11,6 +11,7 @@ body {
   /* padding-top: 60px; */
 }
 
+#wrap{min-width: 320px; max-width: 480px; margin: 0 auto; overflow: hidden; position: relative;}
 
 .chart {
   position: relative;
@@ -265,6 +266,7 @@ color: transparent; font-size: 0 ;}
   .port_mob{display: block !important;}
 
     @media (min-width: 576px) {
+      #wrap{min-width: 576px; max-width: auto;}
       #about .profile{height: 500px;}
     }
 
