@@ -123,7 +123,7 @@ ul.tab_tit{margin-bottom: 0rem !important;}
 .tab_con > div:nth-child(3){display: none; background: url(../assets/img/portfolio/thum04.png) no-repeat center / cover #eee;}
 .tab_con > div:nth-child(4){display: none; background: url(../assets/img/portfolio/thum05.png) no-repeat center / cover #eee;}
 .tab_con > div:nth-child(5){display: none; background: url(../assets/img/portfolio/thum06.png) no-repeat center / cover #eee;}
-.tab_con > div:nth-child(6){display: none; background: url(../assets/img/portfolio/thum00.png) no-repeat center / cover #eee;}
+/* .tab_con > div:nth-child(6){display: none; background: url(../assets/img/portfolio/thum00.png) no-repeat center / cover #eee;} */
 
 .tab_con .portfolio-item{position: absolute; bottom: 100px; left: 70px;}
 
