@@ -168,7 +168,7 @@ h2.section-heading{color: #4402ff; opacity: 60%;}
   right: 1rem;
 }
 #portfolio_m .portfolio-item{
-  background-color: #fff; padding: 0 2rem;
+  background-color: #fff; 
 }
 #portfolio_m .portfolio-item .portfolio-link{
   width: 100%;
@@ -178,6 +178,7 @@ h2.section-heading{color: #4402ff; opacity: 60%;}
   border-top-right-radius: 20px;
 }
 #portfolio_m .portfolio-caption{
+  padding: 0 2rem;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
