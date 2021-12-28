@@ -262,8 +262,7 @@ color: transparent; font-size: 0 ;}
   .port_mob{display: block !important;}
 
     @media (min-width: 576px) {
-
-
+      #about .profile{height: 500px;}
     }
 
 
@@ -281,7 +280,7 @@ color: transparent; font-size: 0 ;}
       .masthead h2, .masthead span.txt-rotate{font-size: 5rem;}
       .port_web{display: block !important;}
       .port_mob{display: none !important;}
-      #about .profile{height: 500px;}
+
       .timeline > li {
         width: calc(50% - 20px);
         margin-right: 20px;
