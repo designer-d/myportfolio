@@ -126,7 +126,7 @@ $(".tab_con > div").eq(idx).show();
 
     var scrollPos = $(document).scrollTop();
 
-    if(scrollPos > 600){
+    if(scrollPos > 500){
         $('.chart').easyPieChart({
 
          easing: 'easeOutBounce',
@@ -136,7 +136,7 @@ $(".tab_con > div").eq(idx).show();
          }
       });
         }
-        if(scrollPos > 500 ){
+        if(scrollPos > 400 ){
         $(".tran01").addClass("up")
       } else {$(".tran01").removeClass("up")}
       if(scrollPos > 1000 ){
