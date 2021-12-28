@@ -171,8 +171,6 @@ h2.section-heading{color: #4402ff; opacity: 60%;}
   background-color: #fff; 
 }
 #portfolio_m .portfolio-item .portfolio-link{
-  width: 100%;
-  height: 100%;
   overflow: hidden; 
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
