@@ -91,34 +91,6 @@ $("go_top").click(function(){
     $("html, body").animate({scrollTop: 0})
   });
   
-  $(".tab_tit li").click(function(){
-var idx = $(this).index();
-console.log(idx);
-/*
-1. 사용자가 선택한  li 에 on 클래스 추가, 나머지는 on 지워져야 함
-2. 사용자가 선택한 li에 순번에 해당하는  div 만 나오고 나머지는 숨어야 함
-*/
-$(".tab_tit li").removeClass("on");
-// $(".tab_tit li").eq(idx).addClass("on");
-$(this).addClass("on");
-$(".tab_con > div").hide();
-$(".tab_con > div").eq(idx).show();
-});
-
-
-$(".tab_tit li").hover(function(){
-var idx = $(this).index();
-console.log(idx);
-/*
-1. 사용자가 마우스오버한  li 에 on 클래스 추가, 나머지는 on 지워져야 함
-2. 사용자가 마우스오버한 li에 순번에 해당하는  div 만 나오고 나머지는 숨어야 함
-*/
-$(".tab_tit li").removeClass("on");
-// $(".tab_tit li").eq(idx).addClass("on");
-$(this).addClass("on");
-$(".tab_con > div").hide();
-$(".tab_con > div").eq(idx).show();
-});
 
 
 
@@ -136,25 +108,25 @@ $(".tab_con > div").eq(idx).show();
          }
       });
         }
-        if(scrollPos > 400 ){
+        if(scrollPos > 600 ){
         $(".tran01").addClass("up")
       } else {$(".tran01").removeClass("up")}
-      if(scrollPos > 1000 ){
+      if(scrollPos > 1700 ){
         $(".tran02").addClass("up")
       } else {$(".tran02").removeClass("up")}
-      if(scrollPos > 1200 ){
+      if(scrollPos > 1700 ){
         $(".tran02_m").addClass("up")
       } else {$(".tran02_m").removeClass("up")}
-      if(scrollPos > 1800 ){
+      if(scrollPos > 2300 ){
         $(".tran03").addClass("up")
       } else {$(".tran03").removeClass("up")}
-      if(scrollPos > 2000 ){
+      if(scrollPos > 2600 ){
         $(".trans03_le").addClass("le")
       } else {$(".trans03_le").removeClass("le")}
-      if(scrollPos > 2000 ){
+      if(scrollPos > 2600 ){
         $(".trans03_ri").addClass("ri")
       } else {$(".trans03_ri").removeClass("ri")}
-      if(scrollPos > 3000 ){
+      if(scrollPos > 3500 ){
         $(".tran04").addClass("up")
       } else {$(".tran04").removeClass("up")}
 
@@ -182,10 +154,10 @@ $(".tab_con > div").eq(idx).show();
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#Skills">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Intro">Intro</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio_m">Works</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#License">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
                         <!-- <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> -->
                     </ul>
                 </div>
@@ -194,198 +166,55 @@ $(".tab_con > div").eq(idx).show();
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <!-- <div class="masthead-subheading">Welcome!</div>
-                <div class="masthead-heading text-uppercase">Designer D Portfolio</div> -->
-                <h2>
-                    I'm a
-                    <span class="txt-rotate"
+                <h1 class="">
+                    야무지게<br>
+                    <span class="txt-rotate "
                           data-period="100"
-                          data-rotate='[ "Designer. ", "Publisher. "]'>
+                          data-rotate='[ "디자인  ", "문제해결  ", "일  "]'>
                     </span>
-                </h2>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#Skills">Get Started</a>
+                    <br>합니다<br>
+                    <a class="btn btn-primary btn-xl text-uppercase" href="#Intro">디자인 스튜디오 야무 YAMOO</a>
+                </h1>
+                
             </div>
         </header>
-        <!-- Services-->
-        <section class="page-section" id="Skills">
+
+
+
+
+
+        <!-- Intro-->
+        <section class="page-section" id="Intro">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">I can do</h2>
-                    <h3 class="section-subheading text-muted">기술사항</h3>
+                <div class="">
+                    <h2 class="section-heading text-uppercase">Intro</h2>
+                    <h3 class="section-subheading text-muted">소개글</h3>
                 </div>
-                <div class="row text-center tran01">
-                    <div class="col-md-4">
-                        <!-- <img class="skill_pg" src="assets/img/skills01.png" alt="..." /> -->
-                        <span class="chart" data-percent="98">
-                            <span class="percent"></span>
-                        </span>
-                        <h5 class="my-1">Adobe Ai / Ps</h5>
-                        <!-- <p class="text-muted">Lorem ipsum dolor sit amet.</p> -->
-                    </div>
-                    <div class="col-md-4">
-                        <span class="chart" data-percent="85">
-                            <span class="percent"></span>
-                        </span>
-                        <h5 class="my-1">Adobe InD / Xd</h5>
-                        <!-- <img class="skill_pg" src="assets/img/skills02.png" alt="..." /> -->
-                        <!-- <p class="text-muted">Lorem ipsum dolor sit amet.</p> -->
-                    </div>
-                    <div class="col-md-4">
 
-                        <span class="chart" data-percent="80">
-                            <span class="percent"></span>
-                        </span>
-                        <h5 class="my-1">HTML / CSS / JS</h5>
-                        <!-- <img class="skill_pg" src="assets/img/skills03.png" alt="..." /> -->
-                        <!-- <p class="text-muted">Lorem ipsum dolor sit amet</p> -->
+                <div class="row tran01">
+
+                    <div class="col-md-4">
+                        <img class="skill_pg" src="assets/img/skills01.png" alt="..." />
+                        <img class="skill_pg" src="assets/img/skills02.png" alt="..." />
                     </div>
+
+                    <div class="col-md-8">
+                        <h2 class="int_txt">디자인은 문화를 만듭니다. <br>문화는 가치를 형성합니다. <br>그 가치는 미래를 결정합니다. </h2>
+                        <p class="int_p">Robert L. Peters</p>
+                    </div>
+
+
                 </div>
             </div>
         </section>
-        <!-- Portfolio Grid web-->
-        <div class="port_web">
-        <section class="page-section" id="portfolio">
-            <div class="container ">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">포트폴리오</h3>
-                </div>
-                <div class="row ">
-                    <div class="tab_wrap tran02">
-                        <div class="tab_tit">
-                          <ul class="clear">
-                            <!-- <li >이쪼</li> -->
-                            <li class="on">KD M&C</li>
-                            <li>포인튠</li>
-                            <li>예스쿨</li>
-                            <li>창원의 집</li>
-                            <li>동키치킨</li>
-                          </ul>
-                        </div><!--#tab_tit-->
-                        <div class="tab_con">
-                          <!-- <div class="port01">                    
-                              <div class="col-lg-4 col-sm-6 mb-4"> -->
-                        <!-- Portfolio item 1-->
-                           <!-- <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                                Work process</a>
-                            <a class="site_link" href="https://designer-d.github.io/project01/">Go to site</a>
-                          </div> -->
-                          <!-- portfolio-item -->
-                        <!-- <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Responsible Web</div>
-                            <h4>더마 코스메틱 이쪼</h4>
-                            <p>이쪼 홈페이지 디자인 리뉴얼</p>
-                            <div class="portfolio-caption-subheading text-muted">
-                                <p>Date 2021.11</p>
-                                <p>Personal project 100%</p>
-                            </div>
-                        </div>
-                       </div>
-                     </div> -->
-                          <div> 
-                              <div class="col-lg-4 col-sm-6 mb-4">
-                            <!-- Portfolio item 2-->
-                            <div class="portfolio-item">
-                                <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                                    Work process</a>
-                                <a class="site_link" href="https://designer-d.github.io/kdmc/">Go to site</a>
-                            </div><!-- portfolio-item -->
-                                <div class="portfolio-caption">
 
-                                    <div class="portfolio-caption-heading">Branding / Web</div>
-                                    <h4>KD M&C</h4>
-                                    <p>KD M&C 홈페이지 디자인</p>
-                                    <div class="portfolio-caption-subheading text-muted">
-                                        <p>Date 2021.11</p>
-                                        <p>Personal project 100%</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                          <div>
-                            <div class="col-lg-4 col-sm-6 mb-4">
-                                <!-- Portfolio item 3-->
-                                <div class="portfolio-item">
-                                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                                        Work process
-                                    </a>
-                                    <a class="site_link" href="https://designer-d.github.io/pointune/">Go to app</a>
-                                </div><!-- portfolio-item -->
-                                    <div class="portfolio-caption">
-                                        <div class="portfolio-caption-heading">App UI</div>
-                                        <h4>포인튠 POINTUNE</h4>
-                                        <p>포인튠 UI 메인 디자인</p>
-                                        <div class="portfolio-caption-subheading text-muted">
-                                            <p>Date 2021.11</p>
-                                            <p>Personal project 100%</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          <div>
-                            <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                                <!-- Portfolio item 4-->
-                                <div class="portfolio-item">
-                                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                                        Work process
-                                    </a>
-                                 </div><!-- portfolio-item -->
-                                    <div class="portfolio-caption">
-                                        <div class="portfolio-caption-heading">Branding / App UI</div>
-                                        <h4>예스쿨 YESCHOOL</h4>
-                                        <p>예스쿨 UI 디자인</p>
-                                        <div class="portfolio-caption-subheading text-muted">
-                                            <p>Date 2021.10</p>
-                                            <p>Personal project 100%</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          <div>
-                            <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                                <!-- Portfolio item 5-->
-                                <div class="portfolio-item">
-                                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                                        Work process
-                                    </a>
-                                </div><!-- portfolio-item -->
-                                    <div class="portfolio-caption">
-                                        <div class="portfolio-caption-heading">Branding / Editorial</div>
-                                        <h4>창원의 집</h4>
-                                        <p>창원의 집 BI 디자인</p>
-                                        <div class="portfolio-caption-subheading text-muted">
-                                            <p>Date 2020.10</p>
-                                            <p>Personal project 100%</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          <div>
-                            <div class="col-lg-4 col-sm-6">
-                                <!-- Portfolio item 6-->
-                                <div class="portfolio-item">
-                                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                                        Work process
-                                    </a>
-                                </div><!-- portfolio-item -->
-                                    <div class="portfolio-caption">
-                                        <div class="portfolio-caption-heading">Branding Renewal</div>
-                                        <h4>동키치킨</h4>
-                                        <p>동키치킨 BI 리뉴얼 디자인</p>
-                                        <div class="portfolio-caption-subheading text-muted">
-                                            <p>Date 2021.12</p>
-                                            <p>Personal project 100%</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!--#tab_con-->
-                      </div><!--#tab_wrap-->
-                </div>
+
+        <div class="animated-title">
+            <div class="track">
+              <div class="content">&nbsp;&nbsp;PROJECT WORKS&nbsp;&nbsp;PROJECT WORKS&nbsp;&nbsp;PROJECT WORKS&nbsp;&nbsp;PROJECT WORKS&nbsp;&nbsp;PROJECT WORKS&nbsp;&nbsp;PROJECT WORKS&nbsp;&nbsp;PROJECT WORKS&nbsp;&nbsp;PROJECT WORKS</div>
             </div>
-        </section>
-        </div><!--.port_web-->
+          </div>
+
 
            <!-- Portfolio Grid mob-->
            <div class="port_mob">
@@ -396,25 +225,25 @@ $(".tab_con > div").eq(idx).show();
                     <h3 class="section-subheading text-muted">포트폴리오</h3>
                 </div>
                 <div class="row tran02_m">
-                    <!-- <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
                                 <img class="img-fluid" src="assets/img/portfolio/thum01.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">더마 코스메틱 이쪼</div>
-                                <div class="portfolio-caption-subheading text-muted">Responsible Web</div>
+                                <div class="portfolio-caption-heading">Responsible Web</div>
+                                <div class="portfolio-caption-subheading text-muted">더마 코스메틱 이쪼</div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
                                 <img class="img-fluid" src="assets/img/portfolio/thum02.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">KD M&C</div>
-                                <div class="portfolio-caption-subheading text-muted">Branding / Web</div>
+                                <div class="portfolio-caption-heading">Branding / Web</div>
+                                <div class="portfolio-caption-subheading text-muted">KD M&C</div>
                             </div>
                         </div>
                     </div>
@@ -424,8 +253,8 @@ $(".tab_con > div").eq(idx).show();
                                 <img class="img-fluid" src="assets/img/portfolio/thum03.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">포인튠</div>
-                                <div class="portfolio-caption-subheading text-muted">App UI</div>
+                                <div class="portfolio-caption-heading">App UI</div>
+                                <div class="portfolio-caption-subheading text-muted">포인튠</div>
                             </div>
                         </div>
                     </div>
@@ -435,8 +264,8 @@ $(".tab_con > div").eq(idx).show();
                                 <img class="img-fluid" src="assets/img/portfolio/thum04.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">예스쿨</div>
-                                <div class="portfolio-caption-subheading text-muted">Branding / App UI</div>
+                                <div class="portfolio-caption-heading">Branding / App UI</div>
+                                <div class="portfolio-caption-subheading text-muted">예스쿨</div>
                             </div>
                         </div>
                     </div>
@@ -446,8 +275,8 @@ $(".tab_con > div").eq(idx).show();
                                 <img class="img-fluid" src="assets/img/portfolio/thum05.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">창원의 집</div>
-                                <div class="portfolio-caption-subheading text-muted">Branding / Editorial</div>
+                                <div class="portfolio-caption-heading">Branding / Editorial</div>
+                                <div class="portfolio-caption-subheading text-muted">창원의 집</div>
                             </div>
                           </div>
                     </div>
@@ -457,8 +286,8 @@ $(".tab_con > div").eq(idx).show();
                                 <img class="img-fluid" src="assets/img/portfolio/thum06.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">동키치킨</div>
-                                <div class="portfolio-caption-subheading text-muted">BI Renewal Design</div>
+                                <div class="portfolio-caption-heading">title</div>
+                                <div class="portfolio-caption-subheading text-muted">Coming Soon</div>
                             </div>
                         </div>
                     </div>
@@ -472,7 +301,7 @@ $(".tab_con > div").eq(idx).show();
         <section class="page-section" id="about">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">About Me</h2>
+                    <h2 class="section-heading text-uppercase">About</h2>
                     <h3 class="section-subheading text-muted">학력 / 경력사항</h3>
                 </div>
                 <div class="profile clear tran03">profile image
@@ -487,15 +316,18 @@ $(".tab_con > div").eq(idx).show();
                     </li>
                     <li class="trans03_ri">
                         <h4>Experience</h4>
-                        <p>2021 부산IT교육센터 웹디자인&웹퍼블리셔 과정수료<br>
-                            2019 - 2020  아트인 입시미술학원 근무 / 기획팀 사원<br>
-                            2017 - 2018  (주)세영약품 근무 / 관리팀 사원<br>
-                            2012 - 2017  국립창원대학교 산업디자인학과 졸업<br>
+                        <p> 2021-2024 국립부경대학교 교육대학원 디자인교육전공 석사 졸업<br>
+                            2022 - 2023 (주)퍼스카 영업부 디자인팀 계장<br>
+                            2021 부산IT교육센터 웹디자인&웹퍼블리셔 과정수료<br>
+                            2019 - 2020  아트인 입시미술학원 기획실 주임<br>
+                            2017 - 2018  (주)세영약품 관리팀 사원<br>
+                            2012 - 2017  국립창원대학교 예술대학 산업디자인학과 학사 졸업<br>
                             2009 - 2012  마산성지여자고등학교 졸업</p>
                     </li>
                     <li class="trans03_le"> 
                         <h4>License</h4>
-                        <p>2021.12  컴퓨터 그래픽스 운용기능사<br>
+                        <p> 2024.02  중등 2급 정교사 자격<br>
+                            2021.12  컴퓨터 그래픽스 운용기능사<br>
                             2021.07  GTQ 일러스트 (1급)<br>
                             2021.06  GTQ 인디자인 (1급)<br>
                             2021.06  GTQ 포토샵 (1급)<br>
@@ -503,20 +335,21 @@ $(".tab_con > div").eq(idx).show();
                         </li>
                     <li class="trans03_ri">
                         <h4>Activities</h4>
-                        <p>2016.12  제 7회 창원신진작가초대전 초청전시<br>
-                            2016.07  제 26회 산업디자인학과 졸업전시준비위원회<br>
-                            2015.09  웹매거진 CAMSCON 캠퍼스 패션 포토그래퍼<br>
-                            2015.01  제 34회 부산산업디자인전람회 특선</p>
+                        <p> 2023.06  [전시참여]  부경감성전 출품<br>
+                            2016.12  [전시참여]  제 7회 창원신진작가초대전 초청전시<br>
+                            2016.07  [교내활동]  제 26회 산업디자인학과 졸업전시준비위원회<br>
+                            2015.09  [대외활동]  웹매거진 CAMSCON 캠퍼스 패션 포토그래퍼<br>
+                            2015.01  [수상경력]  제 34회 부산산업디자인전람회 특선</p>
                     </li>
                 </ul>
             </div>
         </section>
         
-        <!-- Team-->
-        <section class="page-section bg-light" id="License">
+        <!-- Contact-->
+        <section class="page-section bg-light" id="Contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Me</h2>
+                    <h2 class="section-heading text-uppercase">Contact</h2>
                     <h3 class="section-subheading text-muted">연락처</h3>
                 </div>
                 <div class="row tran04">
@@ -524,14 +357,14 @@ $(".tab_con > div").eq(idx).show();
                         <div class="team-member">
                             <i class="fas fa-mobile-alt font_size_3rem"></i>
                             <h4>Mobile</h4>
-                            <p class="text-muted"><a href="tel:01055465213"> +82 10-5546-5213</a> </p>
+                            <p class="text-muted"><a href="#">+82 10-5546-5213</a> </p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
                             <i class="far fa-envelope font_size_3rem"></i>
                             <h4>E-Mail</h4>
-                            <p class="text-muted"><a href="mailto:qwer65940102@gmail.com"> qwer65940102@gmail.com</a></p>
+                            <p class="text-muted"><a href="#"> qwer65940102@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -543,7 +376,7 @@ $(".tab_con > div").eq(idx).show();
                     </div>
                     <div class="">
                         <a class="down" href="이력서 _임단경.pdf">View Resume</a>
-                        <!-- <a class="down" href="#">Portfolio.pdf </a> -->
+                        <a class="down" href="#">Portfolio.pdf </a>
                     </div>
                 </div>
 
@@ -555,29 +388,29 @@ $(".tab_con > div").eq(idx).show();
         <footer class="footer py-4 bg-custom">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">본 페이지는 개인 포트폴리오용으로 제작되었습니다.</div>
+                    <div class="col-lg-4 text-lg-start ">본 페이지는 개인 포트폴리오용으로 제작되었습니다.</div>
                     <div class="col-lg-4 my-3 my-lg-0"></div>
                     <div class="col-lg-4 text-lg-end">
                         <a class="link-dark text-decoration-none me-3" href="#!"></a>
-                        <a class="link-dark text-decoration-none" href="#!">Copyright &copy; 2021 Designer D All rights reserved.</a>
+                        <a class="link-dark text-decoration-none" href="#!">Copyright &copy; 2024 Dan-gyeong All rights reserved.</a>
                     </div>
                 </div>
             </div>
         </footer>
-        <a href="#" class="go_top">TOP </a>
+        <a href="#" class="go_top">UP!</a>
         
         <!-- Portfolio Modals-->
         <!-- Portfolio item 1 modal popup-->
-        <!-- <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-12">
-                                <div class="modal-body"> -->
+                                <div class="modal-body">
                                     <!-- Project details-->
-                                    <!-- <h2 class="text-uppercase">이쪼</h2>
+                                    <h2 class="text-uppercase">이쪼</h2>
                                     <p class="item-intro text-muted">IZZOr</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/modal01.jpg" alt="..." />
                                     <ul class="list-inline">
@@ -600,7 +433,7 @@ $(".tab_con > div").eq(idx).show();
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- Portfolio item 2 modal popup-->
         <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
@@ -611,8 +444,8 @@ $(".tab_con > div").eq(idx).show();
                             <div class="col-lg-12">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <!-- <h2 class="text-uppercase">KD M&C</h2>
-                                    <p class="item-intro text-muted">KD Machine & Construction</p> -->
+                                    <h2 class="text-uppercase">KD M&C</h2>
+                                    <p class="item-intro text-muted">KD Machine & Construction</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/modal02.jpg" alt="..." />
                                     <ul class="list-inline">
                                         <li>
@@ -645,8 +478,8 @@ $(".tab_con > div").eq(idx).show();
                             <div class="col-lg-12">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <!-- <h2 class="text-uppercase">포인튠</h2>
-                                    <p class="item-intro text-muted">Pointune</p> -->
+                                    <h2 class="text-uppercase">포인튠</h2>
+                                    <p class="item-intro text-muted">Pointune</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/modal03.jpg" alt="..." />
                                     <ul class="list-inline">
                                         <li>
@@ -679,8 +512,8 @@ $(".tab_con > div").eq(idx).show();
                             <div class="col-lg-12">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <!-- <h2 class="text-uppercase">예스쿨</h2>
-                                    <p class="item-intro text-muted">YESCHOOL</p> -->
+                                    <h2 class="text-uppercase">예스쿨</h2>
+                                    <p class="item-intro text-muted">YESCHOOL</p>
                             <!----> <div>
                                      <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/modal04.jpg" alt="..." />
 
@@ -716,8 +549,8 @@ $(".tab_con > div").eq(idx).show();
                             <div class="col-lg-12">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <!-- <h2 class="text-uppercase">창원의 집</h2>
-                                    <p class="item-intro text-muted">The house of Changwon</p> -->
+                                    <h2 class="text-uppercase">창원의 집</h2>
+                                    <p class="item-intro text-muted">The house of Changwon</p>
                             <!----> <div><img class="img-fluid d-block mx-auto" src="assets/img/portfolio/modal05.jpg" alt="..." /></div>
                                 <ul class="list-inline">
                                     <li>
@@ -750,17 +583,17 @@ $(".tab_con > div").eq(idx).show();
                             <div class="col-lg-12">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <!-- <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/modal06.jpg" alt="..." />
                                     <ul class="list-inline">
                                         <li>
                                             <strong>Category&nbsp;&nbsp;</strong>
-                                            Branding
+                                            Branding / App UI Design
                                         </li>
                                         <li>
                                             <strong>Date&nbsp;&nbsp;</strong>
-                                            2021 12
+                                            2021 00-00
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
