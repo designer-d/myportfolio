@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+html { overflow-x: hidden; }
+
+body { font-family: 'Pretendard','Raleway'; line-height: 1.5; color: #000; background:#f4f4f4; }
+
+.inner { max-width: calc(100% - 10.77%); margin: 0 auto; } 
+
+
+@media all and (max-width:1200px){
+  body { overflow-x: hidden; }
+}
+
+
+@keyframes name_ani {
+0% { font-weight: 500; }
+15% {font-weight: 700; }
+30% {font-weight: 400; }
+}
+
+@keyframes Publicher_ani {
+  0% { font-weight: 500;}
+  30%{font-weight: 400;}
+  45% {font-weight: 700;}
+  60% {font-weight: 800;}
+  }
+
+@keyframes graphic_ani {
+  0% { font-weight: 500; }
+  30% {font-weight: 600; }
+  55% {font-weight: 600;}
+  80% {font-weight: 700;}
+  }
+
+
+
+
+
+
+
+/* graphic_project  */
+#graphic_project { padding-top: 200px; }
+#graphic_project .list_wrap_grid{ display: flex; position: relative; }
+#graphic_project .list_wrap_grid::before { content: ''; width: 140%; height: 1px; background: #000; position: absolute; top: 0; left: -170px; }
+#graphic_project .list_wrap_grid .gp_txt { width: 42%; padding: 200px 0 200px; border-right: 1px solid #000;  }
+#graphic_project .list_wrap_grid .gp_txt .sticky { position: sticky; top: 150px; }
+#graphic_project .list_wrap_grid .gp_txt .sticky h6 { font-size: 40px; line-height: 1.6; padding-bottom: 60px; }
+#graphic_project .list_wrap_grid .gp_txt .ex { font-size: 17px; line-height: 2.0; }
+#graphic_project .list_wrap_grid .gp_txt .ex .bold { font-weight: 600; }
+
+#graphic_project .list_wrap_grid .gp_list { width: 58%; display: flex; padding: 200px 0 20px 0 ; }
+#graphic_project .list_wrap_grid .gp_list .grid { width: calc(100%/2);}
+#graphic_project .list_wrap_grid .gp_list .grid:first-of-type { padding-right: 30px; }
+#graphic_project .list_wrap_grid .gp_list .grid:nth-of-type(2) { padding-left: 30px; }
+
+#graphic_project .list_wrap_grid .grid_list { margin-bottom: 100px; position: relative; border: 1px solid #000; }
+#graphic_project .list_wrap_grid .grid_depth li:hover .list_img img { filter: brightness(30%); }
+
+#graphic_project .gp_list .grid .grid_depth { display: flex; flex-direction: column; }
+#graphic_project .grid_depth .grid_list .list_img { width: 100%; height: 500px; }
+#graphic_project .gp_list .grid img { width: 100%; height: 100%; object-fit: cover; filter: brightness(80%); transition: filter 0.5; }
+#graphic_project .grid_depth .grid_list .list_txt { padding: 30px 20px 30px; font-family: 'Raleway'; border-top: 1px solid #000; }
+#graphic_project .grid_depth .grid_list .list_txt .type { font-size: 14px; color: #999;  }
+#graphic_project .grid_depth .grid_list .list_txt .title { font-size: 24px; text-transform: uppercase; font-weight: 500; letter-spacing: -0.8px; }
+#graphic_project .grid_depth .grid_list .list_txt .ov { font-size: 14px; font-weight: 400; padding-top: 15px; }
+#graphic_project .grid_depth .grid_list .button_posi { position: absolute; top: 37%; left: 50%; transform: translateX(-50%); }
+#graphic_project .grid_depth .grid_list .button_posi p { font-size: 15px; font-weight: 500; background: url('../images/arrow_bk.png') no-repeat  150px center #f8abbf; border-radius: 40px; display: inline-block; padding: 10px 53px 10px 20px; color: #000; font-family: 'Raleway'; border: 1px solid #000; }
+
+
+
+@media all and (max-width:1805px){
+  #graphic_project .grid_depth .grid_list .button_posi p { background-size:20px; padding: 10px 23px 10px 20px; width: 185px; background: url(../images/arrow_bk.png) no-repeat 145px center #f8abbf; }  
+} 
+
+
+
+@media all and (max-width:1600px){
+  #graphic_project .list_wrap_grid .gp_txt { width: 40%; }
+  #graphic_project .list_wrap_grid .gp_txt .sticky h6 { font-size: 33px; }
+  #graphic_project .list_wrap_grid .gp_txt .ex { font-size: 15px; }
+  #graphic_project .grid_depth .grid_list .list_img { height: 400px; }
+  #graphic_project .grid_depth .grid_list .list_txt .type { font-size: 12px; }
+  #graphic_project .grid_depth .grid_list .list_txt .title { font-size: 21px; }
+  #graphic_project .grid_depth .grid_list .list_txt .ov { font-size: 13px; }
+  #graphic_project .grid_depth .grid_list .button_posi { top: 35%; }
+  #graphic_project .list_wrap_grid .grid_list { margin-bottom: 60px; }
+}
+
+
+
+
+@media all and (max-width:1420px){
+  #graphic_project .list_wrap_grid .gp_list { padding: 550px 0 200px 100px; }
+  #graphic_project .list_wrap_grid .gp_list .grid:first-of-type { padding-right: 15px; }
+  #graphic_project .list_wrap_grid .gp_list .grid:nth-of-type(2) { padding-left: 15px; }
+  #graphic_project .grid_depth .grid_list .list_txt .type { font-size: 10px; }
+  #graphic_project .grid_depth .grid_list .list_txt .title { font-size: 19px; }
+  #graphic_project .grid_depth .grid_list .list_txt .ov { font-size: 11px; }
+  #graphic_project .grid_depth .grid_list .button_posi p { padding: 10px 23px 10px 20px; width:164px; background: url(../images/arrow_bk.png) no-repeat 130px center #f8abbf; background-size: 19px; font-size: 13px; }
+}
+
+@media all and (max-width:1200px){
+  #graphic_project .list_wrap_grid { display: block; }
+  #graphic_project .list_wrap_grid .gp_txt { width: 100%; border: none; padding: 0; }
+  #graphic_project .list_wrap_grid::before { display: none; }
+  #graphic_project .list_wrap_grid .gp_txt .sticky h6 { padding-bottom: 15px; font-size: 25px; }
+  #graphic_project .list_wrap_grid .gp_txt .sticky h6 br { display: none; }
+  #graphic_project .list_wrap_grid .gp_list { padding: 70px 0 130px 0px; width: 100%; }
+  #graphic_project .grid_depth .grid_list .list_txt .type { font-size: 12px; }
+  #graphic_project .grid_depth .grid_list .list_txt .title { font-size: 20px; }
+  #graphic_project .grid_depth .grid_list .list_txt .ov { font-size: 13px; }
+}
+
+
+
+@media all and (max-width:768px){
+  #graphic_project { padding-top: 250px; }
+}
+
+
+
+@media all and (max-width:665px){
+  #graphic_project .grid_depth .grid_list .list_txt .ov br { display: none; }
+}
+
+
+@media all and (max-width:600px){
+  #graphic_project .grid_depth .grid_list .list_img { height: 270px; }
+  #graphic_project .list_wrap_grid .gp_list .grid:first-of-type { padding-right: 7px; }
+  #graphic_project .list_wrap_grid .gp_list .grid:nth-of-type(2) { padding-left: 7px; }
+  #graphic_project .grid_depth .grid_list .list_txt .title { font-size: 18px; }
+  #graphic_project .grid_depth .grid_list .list_txt .ov { display: none; }
+  #graphic_project .list_wrap_grid .grid_list { height: 400px; }
+}
+
+
+
+@media all and (max-width:530px){
+  #graphic_project .list_wrap_grid .gp_txt .sticky h6 br { display: block; }
+  #graphic_project .list_wrap_grid .gp_txt .ex { font-size: 14px; }
+}
+
+
+@media all and (max-width:490px){
+  #graphic_project .grid_depth .grid_list .button_posi p { width: 125px;  padding: 10px; }
+  #graphic_project .grid_depth .grid_list .list_txt .type { font-size: 10px; }
+  #graphic_project .grid_depth .grid_list .list_txt .title { font-size: 15px; }
+}
+
+
+
+@media all and (max-width:450px){
+  #graphic_project .list_wrap_grid .gp_txt .sticky h6 { font-size: 20px; }
+  #graphic_project .list_wrap_grid .gp_txt .ex { font-size: 12px; }
+}
