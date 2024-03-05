@@ -1,4 +1,10 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 html, body{
   font-family: 'Noto Sans', sans-serif;
@@ -7,11 +13,11 @@ html, body{
 body {
   -webkit-font-smoothing: antialiased;
   text-align: center;
-  font: 16px / 1.4 'Helvetica', 'Arial', sans-serif;
+  font: 16px / 1.4 'S-CoreDream-3Light','Helvetica', 'Arial', sans-serif;
   /* padding-top: 60px; */
 }
 
-
+/*
 .chart {
   position: relative;
   display: inline-block;
@@ -35,6 +41,8 @@ body {
   margin-left: 0.1em;
   font-size: .8em;
 }
+*/
+
 
 .font_size_3rem{font-size: 3rem; }
 
@@ -44,7 +52,7 @@ body {
 
 
 #mainNav .navbar-nav .nav-item .nav-link {color: #fff;}
-#mainNav .navbar-nav .nav-item .nav-link:hover{color: #3de2a3; }
+#mainNav .navbar-nav .nav-item .nav-link:hover{color: #ffdacd; }
 
 
 
@@ -111,7 +119,7 @@ header.masthead .btn{margin-top: 10px; border-radius: 10px;}
 
 
 /* 슬라이딩 텍스트 */
-.animated-title {font-size:60px; font-family:'Noto Sans'; font-weight:bold; position: relative; width: 100%; max-width:100%; height: auto; padding:50px 0; overflow-x: hidden; overflow-y: hidden; }
+.animated-title {font-size:60px;  font-weight:bold; position: relative; width: 100%; max-width:100%; height: auto; padding:50px 0; overflow-x: hidden; overflow-y: hidden; }
 .animated-title .track {position: absolute; white-space: nowrap;will-change: transform;animation: marquee 10s linear infinite; }
 @keyframes marquee {
   from { transform: translateX(0); }
@@ -135,8 +143,8 @@ ul.tab_tit{margin-bottom: 0rem !important;}
 .tab_tit li:hover{background-color: #eee; color: #1994fb; font-weight: 700;}
 .tab_tit li.on{background-color: #eee; color: #1994fb; font-weight: 700;}
 
-.portfolio-caption{text-align: left;}
-.portfolio-caption > div{padding: 10px 0;}
+.portfolio-caption{text-align: center;}
+.portfolio-caption > div{padding: 8px 0 0;}
 
 .my-3{padding-top: 30px;}
 
@@ -150,7 +158,6 @@ h3.section-subheading{text-align: center;}
   color: #333;
   position: relative;
   flex: 1 1 auto;
-  padding: 1rem;
 }
 .modal-content {
   background-color: rgba(255 , 255, 255, 1);
@@ -162,27 +169,31 @@ h3.section-subheading{text-align: center;}
 .portfolio-modal{color: #fff;}
 .portfolio-modal .close-modal {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  top: 3rem;
+  right: 3rem;
 }
+#portfolio_m .portfolio-item {margin-right:10px;  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; }
 
-#portfolio_m .portfolio-item .portfolio-link{
-  overflow: hidden; 
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+#portfolio_m .portfolio-link{
+  display: inline-block;
+  position: relative;
+
 }
 #portfolio_m .portfolio-caption{
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  background-color: #f4f4f4;
 }
 #portfolio_m .portfolio-item .portfolio-link:hover .img-fluid{
-  transform: scale(120%);
-  transition: all 0.5s;
-}
 
+}
+.dark{width: 100%; height: 100%; background-color: #000; position: relative; position: absolute; top: 0; left: 0; opacity: 0; transition: all 0.5s; z-index: 1;}
+.dark > p {padding: 10px 20px;  border: 1px solid #fff; border-radius: 10rem; position: absolute;top: 50%; left: 50%;transform: translate(-50%, -50%);}
+
+.dark:hover{opacity: 0.7;}
+.dark:hover p {opacity: 1;}
 
 .portfolio-link:hover, .site_link:hover{color: #fff;
-  background-color: #1994fb;}
+  }
 
 
 
@@ -190,11 +201,20 @@ h3.section-subheading{text-align: center;}
 /* #about .timeline-heading{padding-left: 50px; text-align: left; width: 40%;}
 #about .timeline-heading h4:nth-child(2){text-align: right;} */
 
+#about {background-color: #ffdacd;}
 #about .profile{height: 500px; background: url(../assets/img/about/profile.jpg) no-repeat center / contain;
 color: transparent; font-size: 0 ;}
 #about .timeline{text-align: left;}
-#about .timeline:before {display: none;}
+#about .timeline:before {display: block;}
 #about .timeline li{min-width: 420px; font-size: 1rem; padding: 20px;  margin-bottom: 0px;}
+.timeline > li {
+  width: calc(50% - 20px);
+  margin-right: 20px;
+  float: left;
+  min-height: 210px;
+}
+#about .timeline li:nth-child(2n-1){padding-left: 300px;}
+
 #about .timeline li h4{color: #1994fb;}
 #about .tran03{opacity: 0; transform: translateY(100px); transition: all 0.7s; margin: 0 auto; }/*@@@*/
 #about .tran03.up{opacity: 1; transform: translateY(0) }
@@ -204,7 +224,7 @@ color: transparent; font-size: 0 ;}
 #about .trans03_ri{opacity: 0; transform: translateX(100px); transition: all 0.7s;}/*@@@*/
 #about .trans03_ri.ri{opacity: 1; transform: translateX(0) }
 
-#Contact{height: 90vh; background-color: #000;}
+#Contact{}
 #Contact a{display: block; color:#666; text-decoration:none; margin-top: 20px;} 
 #Contact a:hover{color: #1994fb;}
 #Contact .tran04{
@@ -222,7 +242,7 @@ color: transparent; font-size: 0 ;}
   color: #1994fb;
   background-color: transparent;
   border: 1px solid #1994fb;
-  border-radius: 50%;
+  border-radius: 10px;
   text-decoration: none;
 } 
 #Contact a.down:hover{color: #fff;
@@ -233,13 +253,13 @@ color: transparent; font-size: 0 ;}
 
   .go_top{display: block; width: 80px; height: 80px; padding: 10px; 
   background-color: rgba(0, 0, 0, 0.1); border: 2px solid ; border-radius: 50%; 
-  font-weight: 500; text-align: center; line-height: 50px; color: white; text-decoration: none;
-  position: fixed; bottom: 40px; right: 5%;} 
+  font-weight: 500; text-align: center; line-height: 58px; color: white; text-decoration: none;
+  position: fixed; bottom: 10%; right: 5%;} 
   .go_top:hover{color: #1994fb; border: 2px solid #1994fb;}
   
 
   .port_web{display: none !important;}
-  .port_mob{display: block !important;}
+  .port_mob{display:inline-block !important;}
 
 
 
@@ -251,8 +271,8 @@ color: transparent; font-size: 0 ;}
       padding-bottom: 8rem;}
 
     .container h1, .container span.txt-rotate{font-size: 10rem;}
-
     #about .timeline li:nth-child(2n-1){padding-left: 200px;}
+
   }
 
 
@@ -270,7 +290,7 @@ color: transparent; font-size: 0 ;}
 
 
       .port_web{display: block !important;}
-      .port_mob{display: none !important;}
+      .port_mob{display:  !important;}
 
       .timeline > li {
         width: calc(50% - 20px);
@@ -279,10 +299,10 @@ color: transparent; font-size: 0 ;}
         min-height: 210px;
       }
       .timeline > li:last-child{margin-right: 0;}
-      #about .timeline li:nth-child(2n-1){padding-left: 100px;
+      #about .timeline li:nth-child(2n-1){padding-left: 20px;
       }
+      #about .timeline:before {display: none;}
       
-    
-
+    }
 
 

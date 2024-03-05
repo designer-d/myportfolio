@@ -1,15 +1,5 @@
 @charset "UTF-8";
-/*!
-* Start Bootstrap - Agency v7.0.10 (https://startbootstrap.com/theme/agency)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
-*/
-/*!
- * Bootstrap v5.1.3 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+ 
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -236,7 +226,7 @@ sup {
 }
 
 a {
-  color: #3de2a3;
+  color: #ffdacd;
   text-decoration: underline;
 }
 a:hover {
@@ -635,8 +625,7 @@ progress {
 .container-md,
 .container-sm {
   width: 100%;
-  padding-right: var(--bs-gutter-x, 0.75rem);
-  padding-left: var(--bs-gutter-x, 0.75rem);
+
   margin-right: auto;
   margin-left: auto;
 }
@@ -663,11 +652,11 @@ progress {
 }
 @media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1320px;
+    max-width: 1480px;
   }
 }
 .row {
-  --bs-gutter-x: 1.5rem;
+
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
@@ -679,8 +668,7 @@ progress {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
+
   margin-top: var(--bs-gutter-y);
 }
 
@@ -5579,7 +5567,7 @@ textarea.form-control-lg {
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: 1rem;
+
 }
 
 .modal-footer {
@@ -7806,7 +7794,7 @@ textarea.form-control-lg {
   --bs-text-opacity: 1;
 }
 
-.bg-custom{background-color: #000;}
+.bg-custom{background-color: #eee;}
 
 
 .bg-primary {
@@ -11370,7 +11358,7 @@ p {
   letter-spacing: 0.0625em;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #3de2a3;
+  color: #ffdacd;
 }
 
 @media (min-width: 992px) {
@@ -11501,8 +11489,7 @@ header.masthead .masthead-heading {
   max-width: 100vw;
 }
 .portfolio-modal .modal-content {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
   text-align: center;
 }
 .portfolio-modal .modal-content h2, .portfolio-modal .modal-content .h2 {
@@ -11521,7 +11508,7 @@ header.masthead .masthead-heading {
   margin-bottom: 2rem;
 }
 .portfolio-modal .modal-content img {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 .portfolio-modal .close-modal {
   position: absolute;
