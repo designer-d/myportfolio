@@ -88,8 +88,7 @@ header.masthead::before{content: ''; display: block;
 header.masthead .btn{margin-top: 10px; border-radius: 10px;}
 
 .container{position: relative;}
-.container h1, .container span.txt-rotate{font-size:8.1rem; text-align: center;  font-family: 'Noto Sans', cursive; font-weight: 600;
-}
+.container h1, .container span.txt-rotate{font-size:8.1rem; text-align: center;  font-family: 'Helvetica'; font-weight: 600;}
 
 .txt-rotate{color: #1994fb;}
 .dg{color: #1994fb;}
@@ -123,7 +122,7 @@ header.masthead .btn{margin-top: 10px; border-radius: 10px;}
 
 
 /* 슬라이딩 텍스트 */
-.animated-title {font-size:60px;  font-weight:bold; position: relative; width: 100%; max-width:100%; height: auto; padding:50px 0; overflow-x: hidden; overflow-y: hidden; }
+.animated-title {font-size:60px; font-family: 'Helvetica'; font-weight:bold; position: relative; width: 100%; max-width:100%; height: auto; padding:50px 0; overflow-x: hidden; overflow-y: hidden; }
 .animated-title .track {position: absolute; white-space: nowrap;will-change: transform;animation: marquee 10s linear infinite; }
 @keyframes marquee {
   from { transform: translateX(0); }
