@@ -146,8 +146,8 @@ ul.tab_tit{margin-bottom: 0rem !important;}
 .tab_tit li:hover{background-color: #eee; color: #1994fb; font-weight: 700;}
 .tab_tit li.on{background-color: #eee; color: #1994fb; font-weight: 700;}
 
-.portfolio-caption{text-align: center;}
-.portfolio-caption > div{padding: 8px 0 0;}
+.portfolio-caption{text-align: center;line-height: 1.8; padding: 10px 0;}
+.portfolio-caption > div{}
 
 .my-3{padding-top: 30px;}
 
