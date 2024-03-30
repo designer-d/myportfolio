@@ -88,7 +88,7 @@ header.masthead::before{content: ''; display: block;
 header.masthead .btn{margin-top: 10px; border-radius: 10px;}
 
 .container{position: relative;}
-.container h1, .container span.txt-rotate{font-size:8.4rem; text-align: center;  font-family: 'Helvetica'; font-weight: 600;}
+.container h1, .container span.txt-rotate{font-size:9rem; text-align: center;  font-family: 'Helvetica'; font-weight: 600;}
 
 .txt-rotate{color: #1994fb;}
 .dg{color: #1994fb;}
